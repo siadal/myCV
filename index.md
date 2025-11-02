@@ -11,7 +11,7 @@ title: "Βιογραφικό"
 🔗 [GitHub]({{ site.data.cv.links.github }}) · [LinkedIn]({{ site.data.cv.links.linkedin }})
 
 ---
-
+ 
 ## Περίληψη
 {{ site.data.cv.summary }}
 
