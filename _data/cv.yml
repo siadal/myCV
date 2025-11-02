@@ -1,0 +1,31 @@
+name: "Aspasia Dalanika"
+title: "Φοιτήτρια MSc"
+email: "aspasiadal@gmail.com"
+phone: "+306986853043"
+links:
+  github: "https://github.com/siadal"
+  linkedin: "https://linkedin.com/in/το-προφίλ-μου"
+summary: >
+  Σύντομη περιγραφή 2-3 προτάσεις για το προφίλ μου.
+
+education:
+  - degree: "MSc ... "
+    institution: "Πανεπιστήμιο ..."
+    period: "2024–2026"
+
+experience:
+  - role: "Θέση πρακτικής"
+    org: "Οργανισμός"
+    period: "2024"
+    bullets:
+      - "Συνοπτική ευθύνη 1"
+      - "Συνοπτική ευθύνη 2"
+
+skills:
+  - "Python"
+  - "Git/GitHub"
+  - "Jekyll"
+
+languages:
+  - "Ελληνικά"
+  - "Αγγλικά"
