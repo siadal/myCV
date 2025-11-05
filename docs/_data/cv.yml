@@ -10,18 +10,18 @@ summary: >
 
 education:
   - degree: "BSc in Computer Science and Bioinformatics"
-    institution: "University of Thessaly"
-    period: "2018–2024"
+    university: "University of Thessaly"
+    year: "2018–2024"
 
   - degree: "MSc in Pervasive and Mobile Computing Systems"
-    institution: "Hellenic Open University"
-    period: "2024–"
+    university: "Hellenic Open University"
+    year: "2024–"
  
 experience:
   - role: "Technical Support Specialist"
-    org: "ATHEXGROUP"
+    company: "ATHEXGROUP"
     period: "2023-"
-    bullets:
+    details:
       - "Upgrades, repairs, and documentation of electronic equipment (desktops, laptops, monitors, peripherals, printers, etc.)"
       - "Support for operating systems and application issues (Windows, Microsoft applications, corporate applications)"
       - "Management of audiovisual equipment and support for corporate events"
