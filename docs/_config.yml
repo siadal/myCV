@@ -1,5 +1,18 @@
-title: My CV
-theme: minima
+title: "Aspasia Dalanika CV"
+description: "Curiculum Vitae"
 baseurl: "/myCV"
+url: "https://siadal.github.io"
+
+theme: null
 sass:
   style: compressed
+  sass_dir: assets/css
+
+plugins:
+  - jekyll-sass-converter
+
+# Όνομα και Social Links
+name: "Aspasia Dalanika"
+email: "aspasiadal@gmail.com"
+github: "https://github.com/siadal"
+linkedin: "https://linkedin.com/in/aspasia-dalanika"

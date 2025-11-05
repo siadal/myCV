@@ -1,10 +1,10 @@
-name: "Aspasia Dalanika"
-title: "MSc 'Pervasive & Mobile Computing Systems' student"
-email: "aspasiadal@gmail.com"
-phone: "+306986853043"
-links:
-  github: "https://github.com/siadal"
-  linkedin: "https://linkedin.com/in/aspasia-dalanika"
+personal:
+  name: "Aspasia Dalanika"
+  title: "MSc 'Pervasive & Mobile Computing Systems' student"
+  email: "aspasiadal@gmail.com"
+  phone: "+306986853043"
+  location: "Trikala, Thessaly, Greece"
+  
 summary: >
   I hold a BSc in "Computer Science and Bioinformatics" from the University of Thessaly. Currently, I'm pursuing an MSc in "Pervasive and Mobile Computing Systems" at the Hellenic Open University. For the past two years, I'm working as a Technical Support Specialist in the company ATHEXGROUP.
 

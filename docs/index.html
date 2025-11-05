@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<section class="cv-container">
+  <div class="cv-header">
+    <h1>{{ site.data.cv.personal.name }}</h1>
+    <h2>{{ site.data.cv.personal.title }}</h2>
+    <p>
+      📍 {{ site.data.cv.personal.location }} |
+      📧 {{ site.data.cv.personal.email }} |
+      ☎️ {{ site.data.cv.personal.phone }}
+    </p>
+    <p>
+      <a href="{{ site.github }}">GitHub</a> |
+      <a href="{{ site.linkedin }}">LinkedIn</a>
+    </p>
+  </div>
+
+  <div class="cv-section">
+    <h3>🎓 Education</h3>
+    {% for item in site.data.cv.education %}
+      <div class="item">
+        <strong>{{ item.degree }}</strong> — {{ item.university }} ({{ item.year }})
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="cv-section">
+    <h3>💼 Experience</h3>
+    {% for job in site.data.cv.experience %}
+      <div class="item">
+        <strong>{{ job.role }}</strong>, {{ job.company }} ({{ job.period }})
+        <ul>
+          {% for d in job.details %}
+          <li>{{ d }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="cv-section">
+    <h3>🧠 Skills</h3>
+    <p>{{ site.data.cv.skills | join: " · " }}</p>
+  </div>
+
+  <div class="cv-section">
+    <h3>🌐 Languages</h3>
+    <p>{{ site.data.cv.languages | join: " · " }}</p>
+  </div>
+</section>
