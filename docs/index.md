@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Βιογραφικό"
+title: "Curriculum Vitae"
 ---
 
 # {{ site.data.cv.name }}
@@ -12,29 +12,27 @@ title: "Βιογραφικό"
 
 ---
  
-## Περίληψη
+## Summary
 {{ site.data.cv.summary }}
 
-## Σπουδές
+## Studies
 {% for ed in site.data.cv.education %}
 - **{{ ed.degree }}**, {{ ed.institution }} ({{ ed.period }})
 {% endfor %}
 
-## Εμπειρία
+## Experience
 {% for ex in site.data.cv.experience %}
 ### {{ ex.role }} , {{ ex.org }} , {{ ex.period }}
 {% if ex.bullets %}{% for b in ex.bullets %}- {{ b }}
 {% endfor %}{% endif %}
 {% endfor %}
 
-## Δεξιότητες
+## Skills
 {% for s in site.data.cv.skills %}
 - {{ s }}
 {% endfor %}
 
-## Γλώσσες
+## Languages
 {% for l in site.data.cv.languages %}
 - {{ l }}
 {% endfor %}
-
-[Κατέβασε PDF](./resume.pdf)

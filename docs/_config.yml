@@ -1,6 +1,5 @@
-remote_theme: sproogen/resume-theme
+title: My CV
+theme: minima
 baseurl: "/myCV"
-
-title: "CV"
-description: "My CV created with Jekyll about SDY60"
-plugins: [] 
+sass:
+  style: compressed
