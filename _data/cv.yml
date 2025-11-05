@@ -1,31 +1,41 @@
 name: "Aspasia Dalanika"
-title: "Φοιτήτρια MSc"
+title: "MSc 'Pervasive & Mobile COmputing Systems' student"
 email: "aspasiadal@gmail.com"
 phone: "+306986853043"
 links:
   github: "https://github.com/siadal"
-  linkedin: "https://linkedin.com/in/το-προφίλ-μου"
+  linkedin: "https://linkedin.com/in/aspasia-dalanika"
 summary: >
-  Σύντομη περιγραφή 2-3 προτάσεις για το προφίλ μου.
+  I hold a BSc in "Computer Science and Bioinformatics" from the University of Thessaly. Currently, I'm pursuing an MSc in "Pervasive and Mobile Computing Systems" at the Hellenic Open University. For the past two years, I'm working as a Technical Support Specialist in the company ATHEXGROUP.
 
 education:
-  - degree: "MSc ... "
-    institution: "Πανεπιστήμιο ..."
-    period: "2024–2026"
+  - degree: "BSc in Computer Science and Bioinformatics"
+    institution: "University of Thessaly"
+    period: "2018–2024"
+
+  - degree: "MSc in Pervasive and Mobile Computing Systems"
+    institution: "Hellenic Open University"
+    period: "2024–"
  
 experience:
-  - role: "Θέση πρακτικής"
-    org: "Οργανισμός"
-    period: "2024"
+  - role: "Technical Support Specialist"
+    org: "ATHEXGROUP"
+    period: "2023-"
     bullets:
-      - "Συνοπτική ευθύνη 1"
-      - "Συνοπτική ευθύνη 2"
+      - "Upgrades, repairs, and documentation of electronic equipment (desktops, laptops, monitors, peripherals, printers, etc.)"
+      - "Support for operating systems and application issues (Windows, Microsoft applications, corporate applications)"
+      - "Management of audiovisual equipment and support for corporate events"
+      - "Management of Active Directory, Exchange and Microsoft Admin Centers"
+      - "Creation and maintenance of the Technical Support Department's SharePoint site"
 
 skills:
   - "Python"
-  - "Git/GitHub"
-  - "Jekyll"
+  - "R"
+  - "C/C++"
+  - "Microcontroller Programming (Raspberry Pi, Arduino)"
+  - "Machine Learning / AI"
+  - "Microsoft Office 365"
 
 languages:
-  - "Ελληνικά"
-  - "Αγγλικά"
+  - "Greek (native)"
+  - "English (C2)"
