@@ -3,7 +3,7 @@ layout: default
 title: "Βιογραφικό"
 ---
 
-# {{ site.data.cv.name }}
+# {{ site._data.cv.name }}
 **{{ site.data.cv.title }}**
 
 📧 [{{ site.data.cv.email }}](mailto:{{ site.data.cv.email }}) · {{ site.data.cv.phone }}
