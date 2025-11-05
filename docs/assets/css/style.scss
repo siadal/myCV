@@ -1,104 +1,176 @@
-/* -------------------- Fonts & Variables -------------------- */
+/* ------------ Modern CV theme (no HTML changes) ------------ */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-$font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-$bg-color: #f7f9fc;
-$text-color: #1a1f2b;
-$primary-color: #2f6df2;
-$secondary-color: #7783a1;
-$border-radius: 14px;
-$shadow: 0 6px 18px rgba(20, 30, 60, 0.08);
+/* Palette & tokens */
+$bg: #0f172a;              /* page background */
+$card: #ffffff;            /* content card */
+$ink: #0b1220;             /* main text */
+$sub: #6b7280;             /* secondary text */
+$primary: #2563eb;         /* accents/buttons/links */
+$accent: #a78bfa;          /* subtle gradient edge */
+$radius: 18px;
+$shadow: 0 18px 40px rgba(15, 23, 42, .12);
+$maxw: 920px;
 
-/* -------------------- General Styles -------------------- */
+html, body {
+  margin: 0; padding: 0;
+}
+
 body {
-  font-family: $font-stack;
-  background-color: $bg-color;
-  color: $text-color;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: $ink;
+  background:
+    radial-gradient(1000px 600px at 10% -10%, rgba($accent, .18), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba($primary, .14), transparent 60%),
+    $bg;
 }
 
+/* ---- main card that wraps Jekyll content ---- */
 .page-content {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: $border-radius;
+  max-width: $maxw;
+  margin: 64px auto;
+  padding: clamp(20px, 3.6vw, 44px);
+  background: $card;
+  border-radius: $radius;
   box-shadow: $shadow;
+  border: 1px solid rgba(2, 6, 23, .06);
 }
 
-/* -------------------- Headers -------------------- */
+/* ---- headings ---- */
 h1, h2, h3 {
-  font-weight: 700;
-  color: $text-color;
+  margin: 0 0 .6rem 0;
+  line-height: 1.25;
+  letter-spacing: .2px;
+  color: $ink;
 }
-
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.4rem;
+  font-size: clamp(28px, 4.8vw, 40px);
+  font-weight: 800;
 }
-
 h2 {
+  font-size: clamp(18px, 2.6vw, 22px);
   margin-top: 2.2rem;
-  font-size: 1.4rem;
-  border-bottom: 2px solid rgba(47, 109, 242, 0.15);
-  padding-bottom: 0.3rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid rgba(37, 99, 235, .12);
+}
+h3 {
+  font-size: clamp(16px, 2.2vw, 19px);
+  color: $primary;
+  font-weight: 700;
 }
 
-/* -------------------- Sections -------------------- */
-.section {
-  margin-top: 1.5rem;
+/* ---- intro line under H1 (works even without classes) ---- */
+h1 + p {
+  font-size: 1.06rem;
+  color: $sub;
+  margin-top: .2rem;
+  margin-bottom: .8rem;
 }
 
-.card {
-  background: #fff;
-  border: 1px solid #edf0f5;
-  border-radius: $border-radius;
-  padding: 1.2rem 1.5rem;
-  margin-top: 1rem;
-  box-shadow: $shadow;
-}
+/* ---- paragraph / text ---- */
+p { margin: .3rem 0 1rem; color: $ink; }
+strong { font-weight: 700; color: $ink; }
+em { color: $sub; }
 
-.card h3 {
-  margin-top: 0;
-  color: $primary-color;
-}
-
-.lead {
-  font-size: 1.15rem;
-  color: $secondary-color;
-}
-
-/* -------------------- Skills -------------------- */
-.badges {
-  margin-top: 1rem;
-}
-
-.badge {
-  display: inline-block;
-  background: rgba(47, 109, 242, 0.1);
-  color: $primary-color;
-  border-radius: 999px;
-  padding: 0.4rem 0.8rem;
-  margin: 0.2rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-/* -------------------- Links -------------------- */
+/* ---- links -> sleek chips ---- */
 a {
-  color: $primary-color;
+  color: $primary;
   text-decoration: none;
+  border-bottom: 1px dashed rgba(37, 99, 235, .35);
+  transition: all .18s ease;
 }
-
 a:hover {
-  text-decoration: underline;
+  color: darken($primary, 8%);
+  border-bottom-color: transparent;
 }
 
-/* -------------------- Small Details -------------------- */
+/* turn bare links in paragraphs into chips */
+p > a, li > a {
+  display: inline-block;
+  background: rgba(37, 99, 235, .08);
+  border: 1px solid rgba(37, 99, 235, .18);
+  padding: .22rem .55rem;
+  border-radius: 999px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-right: .35rem;
+  border-bottom: none;
+}
+
+/* small icons based on href (no HTML edits) */
+a[href^="mailto"]::before { content: "✉ "; }
+a[href*="linkedin.com"]::before { content: "in "; font-weight: 700; }
+a[href*="github.com"]::before { content: "{} "; }
+
+/* ---- lists -> neat bullets & spacing ---- */
+ul, ol { padding-left: 1.15rem; margin: .4rem 0 1rem; }
+li { margin: .25rem 0; }
+ul > li { list-style: none; position: relative; }
+ul > li::before {
+  content: "";
+  position: absolute; left: -1.1rem; top: .62rem;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, $primary, $accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, .12);
+}
+
+/* ---- soft sections as cards (auto: any list of items looks card-y) ---- */
+h2 + ul, h2 + p + ul, h2 + div, h2 + p + div {
+  margin-top: .8rem;
+}
+.cardish {
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .06);
+}
+
+/* ---- tables (if any) ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .06);
+  margin: 1rem 0 1.4rem;
+}
+th, td { padding: .75rem .9rem; border-bottom: 1px solid #eef2f7; }
+th { text-align: left; background: #f8fafc; color: #111827; }
+
+/* ---- separators ---- */
 hr {
   border: none;
-  border-top: 1px solid #e7eaf0;
-  margin: 2rem 0;
+  border-top: 1px solid #eef2f7;
+  margin: 1.6rem 0;
+}
+
+/* ---- badges for skills without changing HTML ---- */
+h2:has(+ ul) + ul > li {           /* skills list looks like chips */
+  display: inline-block;
+  margin: .25rem .35rem .25rem 0;
+  padding: .35rem .6rem;
+  border: 1px solid rgba(2, 6, 23, .08);
+  border-radius: 999px;
+  background: #f8fafc;
+  box-shadow: inset 0 -1px 0 rgba(2, 6, 23, .04);
+}
+h2:has(+ ul) + ul { padding-left: 0; }
+
+/* ---- responsive tweaks ---- */
+@media (max-width: 720px) {
+  .page-content { margin: 28px 14px; padding: 18px; }
+  h1 { font-size: 28px; }
+}
+
+/* ---- print-friendly (export to PDF) ---- */
+@media print {
+  body { background: #fff; }
+  .page-content {
+    margin: 0; box-shadow: none; border: none; border-radius: 0;
+    max-width: 100%; padding: 0;
+  }
+  a { color: #000; text-decoration: underline; border: none; }
+  ul > li::before { background: #000; box-shadow: none; }
 }
