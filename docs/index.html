@@ -9,7 +9,7 @@ layout: default
     <p>
       📍 {{ site.data.cv.personal.location }} |
       📧 {{ site.data.cv.personal.email }} |
-      ☎️ {{ site.data.cv.personal.phone }}
+      📞 {{ site.data.cv.personal.phone }}
     </p>
     <p>
       <a href="{{ site.github }}">GitHub</a> |
@@ -19,12 +19,12 @@ layout: default
 
   
   <div class="cv-section">
-    <h3>📝 Summary</h3>
+    <h3>Summary</h3>
     <p>{{ site.data.cv.summary }}</p>
   </div>
 
   <div class="cv-section">
-    <h3>🎓 Education</h3>
+    <h3>Education</h3>
     {% for item in site.data.cv.education %}
       <div class="item">
         <strong>{{ item.degree }}</strong> — {{ item.university }} ({{ item.year }})
@@ -33,7 +33,7 @@ layout: default
   </div>
 
   <div class="cv-section">
-    <h3>💼 Experience</h3>
+    <h3>Experience</h3>
     {% for job in site.data.cv.experience %}
       <div class="item">
         <strong>{{ job.role }}</strong>, {{ job.company }} ({{ job.period }})
@@ -47,12 +47,12 @@ layout: default
   </div>
 
   <div class="cv-section">
-    <h3>🧠 Skills</h3>
+    <h3>Skills</h3>
     <p>{{ site.data.cv.skills | join: " · " }}</p>
   </div>
 
   <div class="cv-section">
-    <h3>🌐 Languages</h3>
+    <h3>Languages</h3>
     <p>{{ site.data.cv.languages | join: " · " }}</p>
   </div>
 </section>
