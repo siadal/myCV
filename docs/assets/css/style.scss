@@ -10,17 +10,3 @@ $text-color: #1d2330;
 $background-color: #ffffff;
 $grey-color: #606a7a;
 $link-base-color: $brand-color;
-
-/* εισαγωγή του Minima */
-@import "minima";
-
-/* Λίγες πινελιές */
-.page-content { padding: 2rem 0 3rem; }
-h1, h2 { letter-spacing: .2px; }
-h1 { font-weight: 700; }
-h2 { margin-top: 1.6rem; border-bottom: 1px solid #eef1f6; padding-bottom: .3rem; }
-.section-card {
-  padding: 1rem 1.2rem; border: 1px solid #eef1f6; border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(10,20,40,.06); background: #fff; margin: .9rem 0;
-}
-.badge { display:inline-block; padding:.25rem .55rem; border:1px solid #e8ecf3; border-radius:999px; font-size:.9rem; }
