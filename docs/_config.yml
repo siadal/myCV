@@ -3,5 +3,4 @@ baseurl: "/myCV"
 
 title: "CV"
 description: "My CV created with Jekyll about SDY60"
-theme: minima
 plugins: [] 
